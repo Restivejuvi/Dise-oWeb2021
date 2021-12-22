@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/disenoStyle.css">
+  <title>Animaciones</title>
+</head>
+
+<body>
+  <h1>Apuntes Multimedia</h1>
+  <div class="ejercicios">
+
+    <article>
+      <h2>Mapa de Bits</h2>
+      <div class="mapa_imagen">
+        <img src="imagenes/mar.jpg" />
+
+        <ul class="notas">
+          <li id="nota1">
+            <p>Todo el mar es suyo :)</p>
+          </li>
+          <li id="nota2">
+            <p>¡Me encanta este color azul!</p>
+          </li>
+          <li id="nota3">
+            <p>Dan ganas de tirarse...</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <article>
+      <h2>Imagen de Tipo Vectorial</h2>
+      <img src="imagenes/skyline.svg" alt="insertar SVG con la etiqueta image">
+
+      <iframe src="imagenes/skyline.svg">
+        <img src="imagenes/skyline.png" alt="Imagen alternativa en PNG">
+      </iframe>
+
+    </article>
+    <article>
+      <h2>Picture</h2>
+      <picture>
+        <source srcset="imagenes/premio3.jpg" media="(min-width: 1000px)">
+        <source srcset="imagenes/premio1.jpg" media="(min-width: 600px)">
+        <img src="imagenes/premio2.jpg" alt="MDN">
+      </picture>
+    </article>
+
+    <article>
+      <h2>Keyframes</h2>
+      <img src="imagenes/imagekey.jpg" alt="keyimage" id="keyimage">
+    </article>
+
+    <article>
+      <h2>Canvas</h2>
+      <p>Image to use:</p>
+      <img id="canvasimg" src="imagenes/GenshinImpact02.jpg" alt="The Canvasimg">
+
+      <p>Canvas to fill:</p>
+      <canvas id="myCanvas">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+      <p><button onclick="myCanvas()">Try it</button></p>
+
+      <script>
+        function myCanvas() {
+          var c = document.getElementById("myCanvas");
+          var ctx = c.getContext("2d");
+          var img = document.getElementById("canvasimg");
+          ctx.drawImage(img, 0, 0);
+        }
+      </script>
+    </article>
+
+    <article>
+      <h2>Audio</h2>
+      <audio controls autoplay>
+        <source src="multimedia/nightcore-sorry-not-sorry-lyrics.mp3" type="audio/mpeg">
+      </audio>
+    </article>
+
+    <article>
+      <h2>Video</h2>
+      <video width="320" height="240" controls>
+        <source src="multimedia/video2.mp4" type="video/mp4">
+      </video>
+      <br>
+      <video width="320" height="240" autoplay muted>
+        <source src="multimedia/video1.mp4" type="video/mp4">
+      </video>
+    </article>
+
+    <article>
+      <h2>Gif</h2>
+      <img src="imagenes/1611091551159.gif" alt="Computer man" id="shield">
+    </article>
+
+    <article>
+      <h2>CSS Image Reflection</h2>
+      <img src="imagenes/Raide.jpg" id="raiden">
+    </article>
+
+    <article>
+      <h2>Rounded Images</h2>
+      <img src="imagenes/fire.jpg" alt="emblem" id="fire">
+    </article>
+  </div>
+</body>
+
+<footer>
+  <div id="piePagina">
+<address>javiervillarejo@outlook.com</address> Copyright&copy;: 2021 Javier Villarejo Gayol <img src="imagenes/cc-zero.png" alt="copy" class="copy">
+</div>
+</footer>
+
+</html>

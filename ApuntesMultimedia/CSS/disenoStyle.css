@@ -1,0 +1,119 @@
+body {
+  margin-left: 50px;
+}
+
+.ejercicios {
+  margin-left: 50px;
+}
+
+div.mapa_imagen {
+  position: relative
+}
+ul.notas li {
+  list-style: none;
+  display: none;
+  position: absolute;
+  border: medium solid white;
+  background: url("esta_imagen_no_existe");
+}
+div.mapa_imagen:hover ul.notas li {
+  display: block;
+}
+ul.notas li p {
+  margin: 10px 0 0 0;
+  padding: .3em;
+  display: none;
+  background: #FFF;
+  opacity: 0.65;
+  position: absolute;
+  top: 100%;
+}
+ul.notas li:hover p {
+  display: block;
+}
+
+ul.notas li#nota1 {
+  width: 140px; height: 110px; top: 175px; left: 440px;
+}
+ul.notas li#nota2 {
+  width: 30px; height: 200px; top: 10px; left: 10px;
+}
+ul.notas li#nota3 {
+  width: 60px; height: 60px; top: 200px; left: 200px;
+}
+
+#keyimage {
+  width: 100%;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+#canvasimg {
+  width: 600px;
+  height: 300px;
+}
+
+#myCanvas {
+  width: 600px;
+  height: 300px;
+  border:1px solid #d3d3d3;
+}
+
+#shield {
+  width:400px;
+  height:400px;
+}
+
+#raiden {
+  -webkit-box-reflect: right;
+  height: 400px;
+  width: 400px;
+}
+
+#fire {
+  border-radius: 50%;
+  height: 400px;
+  width: 800px;
+}
+
+#fire:hover {
+  transform: scaleX(-1);
+}
+
+footer {
+  text-align: center;
+  font-weight: bold; 
+  padding: 10px; 
+  border: 2px solid black;
+  border-radius: 6px;
+  clear: both;
+  bottom: 0;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  width: 98.4%;
+}
+
+#piePagina {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  float: inline-end;
+}
+
+.copy {
+  width: 300px;
+  height: 80px;
+}

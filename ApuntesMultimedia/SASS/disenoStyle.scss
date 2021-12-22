@@ -1,0 +1,101 @@
+$colorFondo : white;
+$colorBorde: #d3d3d3;
+$margenes: 50px;
+$medida1: 300px;
+$medida2: 400px;
+$medida3: 600px;
+$medida4: 800px;
+
+body {
+  margin-left: $margenes;
+}
+
+.ejercicios {
+  margin-left: $margenes;
+}
+
+div.mapa_imagen {
+  position: relative
+}
+ul.notas li {
+  list-style: none;
+  display: none;
+  position: absolute;
+  border: medium solid $colorFondo;
+  background: url("esta_imagen_no_existe");
+}
+div.mapa_imagen:hover ul.notas li {
+  display: block;
+}
+ul.notas li p {
+  margin: 10px 0 0 0;
+  padding: .3em;
+  display: none;
+  background: $colorFondo;
+  opacity: 0.65;
+  position: absolute;
+  top: 100%;
+}
+ul.notas li:hover p {
+  display: block;
+}
+
+ul.notas li#nota1 {
+  width: 140px; height: 110px; top: 175px; left: 440px;
+}
+ul.notas li#nota2 {
+  width: 30px; height: 200px; top: 10px; left: 10px;
+}
+ul.notas li#nota3 {
+  width: 60px; height: 60px; top: 200px; left: 200px;
+}
+
+#keyimage {
+  width: 100%;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+#canvasimg {
+  width: $medida3;
+  height: $medida1;
+}
+
+#myCanvas {
+  width: $medida3;
+  height: $medida1;
+  border:1px solid $colorBorde;
+}
+
+#shield {
+  width:$medida2;
+  height:$medida2;
+}
+
+#raiden {
+  -webkit-box-reflect: right;
+  height: $medida2;
+  width: $medida2;
+}
+
+#fire {
+  border-radius: 50%;
+  height: $medida2;
+  width: $medida4;
+}
+
+#fire:hover {
+  transform: scaleX(-1);
+}
