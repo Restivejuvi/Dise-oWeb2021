@@ -1,10 +1,32 @@
 $colorFondo : white;
 $colorBorde: #d3d3d3;
+$colorMarco: black;
 $margenes: 50px;
 $medida1: 300px;
 $medida2: 400px;
 $medida3: 600px;
 $medida4: 800px;
+
+@function color-texto($color) {
+  @if (lightness($color) > 50) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+$colors: black, white, blue, red, green, yellow, orange;
+
+@each $color in $colors {
+  .btn-#{$color} {
+    background: $color;
+    padding: 10px 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: color-texto($color);
+  }
+}
 
 body {
   margin-left: $margenes;
@@ -98,4 +120,30 @@ ul.notas li#nota3 {
 
 #fire:hover {
   transform: scaleX(-1);
+}
+
+footer {
+  text-align: center;
+  font-weight: bold; 
+  padding: 10px; 
+  border: 2px solid $colorMarco;
+  border-radius: 6px;
+  clear: both;
+  bottom: 0;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  width: 98.4%;
+}
+
+#piePagina {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  float: inline-end;
+}
+
+.copy {
+  width: $medida1;
+  height: 80px;
 }
