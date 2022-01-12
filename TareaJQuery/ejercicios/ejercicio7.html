@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="selected">
+        <span>Este deberia ser amarillo</span><br><br>
+    </div>
+    <div>
+        <span>este deberia estar el fondo vacio</span><br><br>
+    </div>
+    <div class="selected">
+        <span>este tambien deberia ser amarillo</span><br><br>
+    </div>
+    <div>
+        <span>este no xd</span><br><br>
+    </div>
+    <div>
+        <span>este esperemos que tampoco se cambie</span><br><br>
+    </div>
+    <div class="selected">
+        <span>y el ultimo amarillo</span><br><br>
+    </div>
+    <script>
+        $(document).ready(function () {
+            //Se muestra solamente los div de la clase selected en amarillo
+            $(".selected").children().css({ 'background-color': 'rgb(255, 255, 149)' });
+        })
+    </script>
+
+</body>
+
+</html>

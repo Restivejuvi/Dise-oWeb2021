@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        #boton {
+            margin-top: 100px;
+            font-size: 30px;
+            border-radius: 20px;
+            background-color: red;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="boton">click me</button>
+
+    <script>
+        var click = true;
+
+        $("#boton").click(function () {
+            if (click) {
+                $("#boton").animate({
+                    left: "400",
+                    width: '+=400'
+                }, "slow");
+                click = false;
+            } else {
+                $("#boton").animate({
+                    left: "100%",
+                    width: '100%'
+                }, "fast");
+                click = true;
+            }
+        });
+    </script>
+</body>
+
+</html>
